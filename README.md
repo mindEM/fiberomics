@@ -24,7 +24,7 @@ Fig.1. Two types of HCC fibers detected by the trained model - reticulin in gree
 The architecture employed is a U-net[^U-net_paper]. It has five levels and a so-called "bottleneck" block in each level on the encoder path. We first used this block to better segment nuclei in a Kaggle competition [^Kaggle_DSBowl_2018] and a lymphocyte paper [^lymphocyte_paper]. The input shape of the model is 256 x 256 x 3; the output has a 256 x 256 pixel-sized image plane and the number of channels in the output can be tuned according to the requirements.
 
 ## Dataset
-Since the model can be tuned to target as many classes of objects as needed accordingly these types of objects have to be annotated in ground truth masks. In Fig.2 below you can see an example of a manually annotated patch:
+Since the model can be tuned to target as many classes of objects as needed, accordingly these types of objects have to be annotated in ground truth masks. In Fig.2 you can see an example of a manually annotated patch:
 ![demo hcc fiber annotations](./demo_images/demo_hcc_fiber_annotation.png "Annotations and augmentations")
 
 Fig.2. Some simple augmentations applied - rotation, flipping, blurring, zooming, and different amount of annotation erosion and dilation applied to one image patch.
@@ -60,5 +60,5 @@ tensorboard == 2.11.0
 [^collagen_paper]: [Morkunas, M., Zilenaite, D., Laurinaviciene, A. et al. Tumor collagen framework from bright-field histology images predicts overall survival of breast carcinoma patients. Sci Rep 11, 15474 (2021).](https://doi.org/10.1038/s41598-021-94862-6)
 [^U-net_paper]: [Ronneberger, O., Fischer, P., Brox, T. U-net: Convolutional networks for biomedical image segmentation. arXiv:1505.04597 (2015)](https://doi.org/10.48550/arXiv.1505.04597)
 [^Kaggle_DSBowl_2018]: [2018 Data Science Bowl: Find the nuclei in divergent images to advance medical discovery](https://www.kaggle.com/competitions/data-science-bowl-2018)
-[^lymphocyte_paper]: [Budginaitė, E., Morkūnas, M., Laurinavičius, A. and Treigys, P., Deep learning model for cell nuclei segmentation and lymphocyte identification in whole slide histology images. Informatica, 32(1) (2021).]()
+[^lymphocyte_paper]: [Budginaitė, E., Morkūnas, M., Laurinavičius, A. and Treigys, P., Deep learning model for cell nuclei segmentation and lymphocyte identification in whole slide histology images. Informatica, 32(1) (2021).](https://doi.org/10.15388/20-INFOR442)
 [^hdf5]: [h5py user manual](https://docs.h5py.org/en/stable/)
